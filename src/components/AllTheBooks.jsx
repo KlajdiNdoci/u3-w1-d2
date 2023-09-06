@@ -1,4 +1,4 @@
-import { Card, Button } from "react-bootstrap";
+import { Card, Button, Row, Col } from "react-bootstrap";
 import FantasyBooks from "../books/fantasy.json";
 import HistoryBooks from "../books/history.json";
 import HorrorBooks from "../books/horror.json";
@@ -13,11 +13,11 @@ function AllTheBooks() {
         <h3>Fantasy Books</h3>
         <Button variant="secondary">Show All</Button>
       </div>
-      <div className="row">
+      <Row>
         {FantasyBooks.map(
           (FantasyBook, index) =>
             index < maxVisibleBooks && (
-              <div className="col-6 col-md-4 col-lg-3 mb-5" key={FantasyBook.asin}>
+              <Col xs={6} lg={3} className="mb-5" key={FantasyBook.asin}>
                 <Card>
                   <Card.Img className="object-fit-contain" src={FantasyBook.img} height={400} />
                   <Card.Body>
@@ -26,19 +26,19 @@ function AllTheBooks() {
                     <Button variant="primary">Buy Book</Button>
                   </Card.Body>
                 </Card>
-              </div>
+              </Col>
             )
         )}
-      </div>
+      </Row>
       <div className="d-flex justify-content-between mb-3">
         <h3>Sci-fi Books</h3>
         <Button variant="secondary">Show All</Button>
       </div>
-      <div className="row">
+      <Row>
         {ScifiBooks.map(
           (ScifiBook, index) =>
             index < 4 && (
-              <div className="col-6 col-md-4 col-lg-3 mb-5" key={ScifiBook.asin}>
+              <Col xs={6} lg={3} className="mb-5" key={ScifiBook.asin}>
                 <Card>
                   <Card.Img className="object-fit-contain" variant="top" src={ScifiBook.img} height={400} />
                   <Card.Body>
@@ -47,19 +47,19 @@ function AllTheBooks() {
                     <Button variant="primary">Buy Book</Button>
                   </Card.Body>
                 </Card>
-              </div>
+              </Col>
             )
         )}
-      </div>
+      </Row>
       <div className="d-flex justify-content-between mb-3">
         <h3>Romance Books</h3>
         <Button variant="secondary">Show All</Button>
       </div>
-      <div className="row">
+      <Row>
         {RomanceBooks.map(
           (RomanceBook, index) =>
             index < maxVisibleBooks && (
-              <div className="col-6 col-md-4 col-lg-3 mb-5" key={RomanceBook.asin}>
+              <Col xs={6} lg={3} className="mb-5" key={RomanceBook.asin}>
                 <Card>
                   <Card.Img className="object-fit-contain" variant="top" src={RomanceBook.img} height={400} />
                   <Card.Body>
@@ -68,19 +68,19 @@ function AllTheBooks() {
                     <Button variant="primary">Buy Book</Button>
                   </Card.Body>
                 </Card>
-              </div>
+              </Col>
             )
         )}
-      </div>
+      </Row>
       <div className="d-flex justify-content-between mb-3">
         <h3>History Books</h3>
         <Button variant="secondary">Show All</Button>
       </div>
-      <div className="row">
+      <Row>
         {HistoryBooks.map(
           (HistoryBook, index) =>
             index < maxVisibleBooks && (
-              <div className="col-6 col-md-4 col-lg-3 mb-5" key={HistoryBook.asin}>
+              <Col xs={6} lg={3} className="mb-5" key={HistoryBook.asin}>
                 <Card>
                   <Card.Img className="object-fit-contain" variant="top" src={HistoryBook.img} height={400} />
                   <Card.Body>
@@ -89,19 +89,19 @@ function AllTheBooks() {
                     <Button variant="primary">Buy Book</Button>
                   </Card.Body>
                 </Card>
-              </div>
+              </Col>
             )
         )}
-      </div>
+      </Row>
       <div className="d-flex justify-content-between mb-3">
         <h3>Horror Books</h3>
         <Button variant="secondary">Show All</Button>
       </div>
-      <div className="row">
+      <Row>
         {HorrorBooks.map(
           (HorrorBook, index) =>
             index < maxVisibleBooks && (
-              <div className="col-6 col-md-4 col-lg-3 mb-5" key={HorrorBook.asin}>
+              <Col xs={6} lg={3} className="mb-5" key={HorrorBook.asin}>
                 <Card>
                   <Card.Img className="object-fit-contain" variant="top" src={HorrorBook.img} height={400} />
                   <Card.Body>
@@ -110,10 +110,10 @@ function AllTheBooks() {
                     <Button variant="primary">Buy Book</Button>
                   </Card.Body>
                 </Card>
-              </div>
+              </Col>
             )
         )}
-      </div>
+      </Row>
     </div>
   );
 }
